@@ -31,9 +31,9 @@ cd /home/wwwroot/
 git clone https://github.com/ssrpanel/ssrpanel.git ssrpanel
 chown -R www:www ssrpanel
 chmod -R a+x ssrpanel
-```
+````
 生成站点key
-```
+````
 php /www/wwwroot/SSRPanel/artisan key:generate
 ````
 
