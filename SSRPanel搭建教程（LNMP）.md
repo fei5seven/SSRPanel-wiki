@@ -37,6 +37,7 @@ chmod -R a+x ssrpanel
 ````
 crontab加入如下命令（请自行修改php、ssrpanel路径）：
 * * * * * php /home/wwwroot/ssrpanel/artisan schedule:run >> /dev/null 2>&1
+* * * * * sudo -u www-data php /var/www/SSRPanel/artisan schedule:run >> /dev/null 2>&1
 
 注意运行权限，必须跟ssrpanel项目权限一致，否则出现各种莫名其妙的错误
 例如用lnmp的话默认权限用户组是 www:www，则添加定时任务是这样的：
