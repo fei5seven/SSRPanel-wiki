@@ -15,7 +15,12 @@ PHP必须开启zip、xml、curl、gd2、fileinfo、openssl、mbstring组件
 vim /usr/local/php/etc/php.ini
 
 搜索disable_function
-删除proc_开头的所有函数
+删除
+putenv
+pcntl_alarm
+pcntl_signal
+symlink
+proc_开头函数
 ````
 
 #### NGINX 加入URL重写规则
@@ -32,6 +37,10 @@ git clone https://github.com/ssrpanel/ssrpanel.git ssrpanel
 chown -R www:www ssrpanel
 chmod -R a+x ssrpanel
 ````
+````
+编译
+composer config repo.packagist composer https://packagist.phpcomposer.com
+composer install
 生成站点key
 ````
 php /www/wwwroot/SSRPanel/artisan key:generate
